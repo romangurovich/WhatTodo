@@ -5,12 +5,9 @@ window.TD = {
   Routers: {},
 
   initialize: function (rootEl, tasks) {
+    new TD.Routers.TasksRouter(rootEl, tasks);
+    Backbone.history.start();
 
-    var tasksListView = new TD.Views.TasksListView({
-      collection: tasks
-    });
-
-    $(rootEl).html(tasksListView.render().$el);
     console.log("Achievement Unlocked: JS Client code runs");
     console.log(tasks);
   }
