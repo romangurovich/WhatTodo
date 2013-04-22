@@ -12,7 +12,6 @@ TD.Views.NewTaskView = Backbone.View.extend({
   },
 
   submit: function () {
-    console.log("so i hear you like saving models");
     var that = this;
 
     var task = new TD.Models.Task({
