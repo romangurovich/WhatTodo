@@ -1,4 +1,7 @@
 TD.Views.TasksListView = Backbone.View.extend({
+  events: {
+    "click li.task": "showTask"
+  },
   render: function () {
     var that = this;
 
@@ -8,5 +11,12 @@ TD.Views.TasksListView = Backbone.View.extend({
 
     that.$el.html(renderedContent);
     return that;
+  },
+  showTask: function(el) {
+    console.log(
+      "You clicked task #" +
+      $(el.target).attr("data-id") +
+      "! So good a click!"
+    );
   }
 });

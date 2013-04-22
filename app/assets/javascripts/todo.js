@@ -7,11 +7,11 @@ window.TD = {
   initialize: function (rootEl, tasks) {
 
     var tasksListView = new TD.Views.TasksListView({
-      collection: tasks;
+      collection: tasks
     });
 
     $(rootEl).html(tasksListView.render().$el);
-    console.run("Achievement Unlocked: JS Client code runs");
+    console.log("Achievement Unlocked: JS Client code runs");
     console.log(tasks);
   }
 };
