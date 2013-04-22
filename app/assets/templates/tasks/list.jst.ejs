@@ -1,8 +1,8 @@
 <ul>
-  <% _(tasks).each(function (task) { %>
-    <li class="task" data-id="<%= task.id %>">
-      <a href="#/tasks/<%= task.id %>">
-        <%= task.title %>
+  <% tasks.each(function (task) { %>
+    <li class="task" data-id="<%= task.escape("id") %>">
+      <a href="#/tasks/<%= task.escape("id") %>">
+        <%= task.escape("title") %>
       </a>
     </li>
   <% }); %>
