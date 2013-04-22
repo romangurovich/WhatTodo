@@ -1,0 +1,10 @@
+<script type="text/javascript">
+$(function () {
+  var tasks = <%= Task.all.to_json.html_safe %>
+
+  window.TD.initialize(
+    $("body")[0],
+    tasks
+  );
+});
+</script>
